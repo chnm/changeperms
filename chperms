@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Change directories to be 775 with g+s and files to be 664.
+
+# run it in the directory you want to affect, or takes a diretory as an argument
+
+find . -type d -exec chmod ug=rwx,g+s,o=rx '{}' \;
+find . -type f -exec chmod 664 '{}' \;
